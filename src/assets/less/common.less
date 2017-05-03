@@ -1,0 +1,208 @@
+html, body { 
+    background: #f0f3f4;
+}
+@labelgreen: #00cc66;
+@labelblue: #3399ff;
+@bordergrey: #e3e8ee;
+@fontblue: #5cadff;
+@warnyellow: #ff9900;
+@fontred: #ff3300;
+ @yellow: #f6d800;
+@mpx: 15px; 
+
+.ivu-card {
+    border-radius: 0px;
+}
+.label {
+    display: inline-block;
+    border-radius: 2px;
+    color: #fff;
+    transform: scale(.7);
+    padding: 0px 5px;
+}
+.label-red {
+    background: @fontred;
+}
+.label-green {
+    background: @labelgreen;
+}
+.label-warn {
+    background: @warnyellow;
+}
+.label-grey {
+    background: @bordergrey;
+}
+.label-blue {
+    background: @fontblue;
+}
+.label-yellow {
+    background: @yellow;
+}
+.trnsformScal(@num: 0.7) {
+    transform: scale(@num);
+    transform-origin: top;
+}
+/* 视频预览 */
+.preview-card {
+    .ivu-card-extra span {
+        display: inline-block;
+        color: #fff;
+        padding: 3px 5px;
+        border-radius: 3px;
+        .trnsformScal;
+    }
+    .upload-time {
+        background: @labelgreen;
+        margin-right: -@mpx;
+    }
+    .length-video {
+        background: @labelblue; 
+    }
+    video {
+        width: 100%;
+        background: #000;
+    }
+    .author-box {
+        margin-top: 10px;
+        img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+            vertical-align: middle;
+        }
+    }
+}
+/* 表现指数 */
+.show-index {
+    .ivu-radio-group {
+        .trnsformScal;
+        margin-right: -45px;
+    }
+    .ivu-card-body {
+        text-align: center;
+        padding: 0;
+        .ivu-row {
+            border-bottom: 1px solid @bordergrey;
+            h2 {
+                color: @fontblue;
+                font-weight: normal;
+            }
+            p {
+                font-size: 12px;
+            }
+        }
+        .ivu-row:last-child {
+            border-bottom: none;
+            h2 {
+               color: @fontred; 
+            }
+        }
+        .ivu-col {
+            padding: 4% 0;
+            border-right: 1px solid @bordergrey;
+            &:last-child {
+                border-right: none;
+            }
+        }
+    }
+}
+/*第二部分*/
+.part-II {
+    .ivu-card-head {
+        border-bottom: none;
+        text-align: center;
+    }
+    .ivu-card-body {
+        border-right: 1px solid @bordergrey;
+    }
+}
+.cold-start {
+    text-align: center;
+    .ivu-card-extra {
+        background: @fontred;
+        color: #fff;
+        .trnsformScal;
+        padding: 3px 5px;
+        border-radius: 4px;
+    }
+    .ivu-card-body .title {
+        margin: 20px;
+    }
+}
+.status-part {
+    .ivu-card-body p {
+        margin-bottom: 19px;
+    }
+}
+/*第三部分*/
+.part-III {
+    & > .ivu-card-extra {
+        padding: 0px 5px;
+        background: @labelblue;
+        color: #fff;
+        border-radius: 2px;
+    }
+    & > .ivu-card-body {
+        padding: 0;
+    }
+}
+.user-info {
+    padding: 16px;
+    img {
+        width: 60px;
+        height: 60px;
+        border-radius: 60px;
+        vertical-align: middle;
+    }
+    .momoid {
+        font-size: 12px;
+    }
+    .label {
+       transform-origin: left; 
+    }
+}
+.user-progress {
+    border-right: 1px solid @bordergrey;
+    border-left: 1px solid @bordergrey;
+    .ivu-card-extra {
+        top: 8px;
+        .trnsformScal;
+        transform-origin: right;
+    }
+    .more {
+        margin-top: 16px;
+        text-align: right;
+        font-size: 12px;
+        .ivu-icon {
+            margin-left: 8px;
+        }
+    }
+}
+.user-others {
+    padding: 16px;
+}
+/* 第四五部分*/
+.show-list {
+    .label {
+        transform-origin: left;
+        position: relative;
+        bottom: -4px;
+    }
+    .content {
+        font-size: 12px;
+    }
+}
+/*第六部分*/
+.history-content {
+    .ivu-icon-ios-arrow-thin-right {
+        margin-left: 10px;
+    }
+}
+.show-result.red {
+    .ivu-card-head {
+        background: @fontred;
+        p {
+            color: #fff;
+        }
+    }
+}
